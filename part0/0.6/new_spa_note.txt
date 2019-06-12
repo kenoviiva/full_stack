@@ -1,0 +1,16 @@
+title Creating new spa_note
+
+note right of browser: User types message and clicks save
+note right of browser: browser adds message with date to notes
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note right of server: 
+browser reads data and date from 
+JSON data and adds it to notes
+end note
+
+server-->browser: HTTP status code 201 (created)
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note

@@ -6,11 +6,11 @@ app.use(express.static('build'))
 
 const cors = require('cors')
 app.use(cors())
-
+/*
 const morgan = require('morgan')
 
 app.use(morgan(':method :url :status :res[content-length] :response-time ms :body'))
-
+*/
 app.get('/', function (req, res) {
   res.send('hello, world!')
 })
@@ -84,11 +84,11 @@ app.get('/api/persons/:id', (request, response) => {
       })
     }
     console.log('body1='+JSON.stringify(body))
-
+/*
     morgan.token('body', function getBody (req) {
       return JSON.stringify(req.body)
     })
-    
+*/  
     
     const result = persons.filter(n => n.name===body.name) 
     if(result.length > 0) {

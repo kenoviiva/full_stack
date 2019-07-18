@@ -8,10 +8,10 @@ app.use(bodyParser.json())
 
 const Person = require('./models/person')
 
-/*
+
 const cors = require('cors')
 app.use(cors())
-*/
+
 const morgan = require('morgan')
 
 app.use(morgan(':method :url :status :res[content-length] :response-time ms :body'))

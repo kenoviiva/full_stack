@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 mongoose.set('useFindAndModify', false)
 const uniqueValidator = require('mongoose-unique-validator')
-
+/*
 const url = process.env.MONGODB_URI
-
+*/
+const url = 'mongodb+srv://fullstack:sx75pivn@fullstack-aiy2f.mongodb.net/phonebook?retryWrites=true&w=majority'
 console.log('connecting to', url)
 
 mongoose.connect(url, { useNewUrlParser: true })

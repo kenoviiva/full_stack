@@ -11,11 +11,11 @@ const Person = require('./models/person')
 
 const cors = require('cors')
 app.use(cors())
-
+/*
 const morgan = require('morgan')
 
 app.use(morgan(':method :url :status :res[content-length] :response-time ms :body'))
-
+*/
 
 app.get('/', function (req, res) {
   res.send('hello, world!')
@@ -127,11 +127,11 @@ const errorHandler = (error, request, response, next) => {
 }
 
 app.use(errorHandler)
-
+/*
 morgan.token('body', function getBody (req) {
   return (req.body===undefined) ? null : JSON.stringify(req.body)
 })
-
+*/
 const PORT = process.env.PORT
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
